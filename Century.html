@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Century from Year Calculator</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        background-color: bisque;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+
+    h2 {
+        text-align: center;
+        background-color: #CF5A1B;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+    <h1>CENTURY FROM YEAR</h1>
+    <div id="result" class="result"></div>
+
+    <script>
+        var year = parseInt(prompt('Enter the year: '));
+        
+        function centuryFromYear(year) {
+            if (year <= 0) {
+                return "Please enter a valid year";
+            }
+
+            const century = Math.ceil(year / 100);
+            return century;
+        }
+
+        document.getElementById("result").innerHTML = '<h2>' + centuryFromYear(year) + '</h2>';
+    </script>
+</body>
+</html>
